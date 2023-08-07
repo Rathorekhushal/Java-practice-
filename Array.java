@@ -1,26 +1,22 @@
-import java.util.Scanner;
+// import javax.xml.crypto.Data;
 
-public class Array {
-   public static void main(String[] args) {
-   //  int marks [] = new int[3];
-   //  for(int i =0; i<=3; i++){
-   //   System.out.print(marks[i]);
-   //  }
-   // }
-   Scanner sc = new Scanner(System.in);
-   int size = sc.nextInt();
-   int marks[] = new int[size];
-   for(int i=0; i<=size;i++){
-       marks[i]=sc.nextInt();
-   } 
-   int x =sc.nextInt();
-   for(int i =0; i<=marks.length; i++){
-      // System.out.println(marks[i]);
-      if(marks[i]==i){
-         System.out.println("marks foud at the index number "+i);
-      }else{
-         System.out.println("marks not found");
-      }
-   }
-   }
-}
+// public class Array {
+//      public static void main(String[] args) {
+      
+//       int a[]={10,20,30,40,50};
+//       int element=100;
+//       int pos=3;
+//       for(int i=a.length-1; i<pos-1;i--){
+//             a[i]=a[i-1];
+//       }
+//       a[pos-1]=element;
+//       for(int i=0;i<a.length-1;i++){
+//             System.out.println(a[i]+"");
+//       }
+// }
+// int a[]={10,20,30,40,50,60};
+// public void insert(data);
+//     public static void main(String[] args) {
+//       Array A=new Array();
+//     }
+// }
