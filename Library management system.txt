@@ -1,0 +1,157 @@
+Sure, let's create a small library management system using Object-Oriented Programming (OOP) principles in Java. This system will include classes for `Book`, `User`, `Library`, and `Transaction`. Each class will have attributes and methods to perform various operations within the library system.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+// Book class represents a book in the library
+class Book {
+    private String ISBN;
+    private String title;
+    private String author;
+    private boolean available;
+
+    public Book(String ISBN, String title, String author) {
+        this.ISBN = ISBN;
+        this.title = title;
+        this.author = author;
+        this.available = true; // By default, book is available when added to the library
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+}
+
+// User class represents a library user
+class User {
+    private int userID;
+    private String name;
+    private String contactInfo;
+
+    public User(int userID, String name, String contactInfo) {
+        this.userID = userID;
+        this.name = name;
+        this.contactInfo = contactInfo;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getContactInfo() {
+        return contactInfo;
+    }
+}
+
+// Library class represents a library
+class Library {
+    private List<Book> books;
+    private List<User> users;
+
+    public Library() {
+        this.books = new ArrayList<>();
+        this.users = new ArrayList<>();
+    }
+
+    // Add book to the library
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
+    // Register new user
+    public void registerUser(User user) {
+        users.add(user);
+    }
+
+    // Display all available books
+    public void displayAvailableBooks() {
+        System.out.println("Available Books:");
+        for (Book book : books) {
+            if (book.isAvailable()) {
+                System.out.println(book.getTitle() + " by " + book.getAuthor());
+            }
+        }
+        System.out.println();
+    }
+}
+
+// Transaction class represents a transaction (borrowing/returning a book)
+class Transaction {
+    private int transactionID;
+    private int userID;
+    private String bookISBN;
+    private boolean isBorrowed; // true if borrowing, false if returning
+
+    public Transaction(int transactionID, int userID, String bookISBN, boolean isBorrowed) {
+        this.transactionID = transactionID;
+        this.userID = userID;
+        this.bookISBN = bookISBN;
+        this.isBorrowed = isBorrowed;
+    }
+
+    public int getTransactionID() {
+        return transactionID;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public String getBookISBN() {
+        return bookISBN;
+    }
+
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+}
+
+public class LibraryManagementSystem {
+    public static void main(String[] args) {
+        // Create some books
+        Book book1 = new Book("1234567890", "Java Programming", "John Doe");
+        Book book2 = new Book("0987654321", "Object-Oriented Design", "Jane Smith");
+
+        // Create some users
+        User user1 = new User(1, "Alice", "alice@example.com");
+        User user2 = new User(2, "Bob", "bob@example.com");
+
+        // Create a library
+        Library library = new Library();
+
+        // Add books to the library
+        library.addBook(book1);
+        library.addBook(book2);
+
+        // Register users
+        library.registerUser(user1);
+        library.registerUser(user2);
+
+        // Display available books
+        library.displayAvailableBooks();
+    }
+}
+```
+
+This code creates a basic library management system where you can add books to the library, register users, and display available books. This is a starting point, and you can extend it further to include more functionality like borrowing and returning books, keeping track of transactions, searching for books, etc.
