@@ -1,0 +1,95 @@
+Sure, let's break down the provided Java code line by line:
+
+```java
+package Smallproject;
+```
+- This line specifies the package name where the classes `Book`, `User`, `Library`, `Transaction`, and `LibraryManagment` are located.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+```
+- These lines import the `ArrayList` and `List` classes from the `java.util` package. These classes are used for creating dynamic arrays and working with lists of objects.
+
+```java
+public class Book {
+```
+- This line declares a class named `Book`.
+
+```java
+    private String ISbN;
+    private String Tittle;
+    private String Author;
+    private boolean Avialable;
+```
+- These lines declare private instance variables for the `Book` class to store the ISBN, title, author, and availability of a book.
+
+```java
+    public Book(String ISbN, String Tittle,String Author,boolean Avialable){
+```
+- This line declares a constructor for the `Book` class, which takes parameters for ISBN, title, author, and availability to initialize a `Book` object.
+
+```java
+        this.ISbN=ISbN;
+        this.Tittle=Tittle;
+        this.Author=Author;
+        this.Avialable=Avialable;
+```
+- These lines initialize the instance variables of the `Book` object with the values passed to the constructor.
+
+```java
+    }
+```
+- This line marks the end of the constructor.
+
+```java
+    public String getISbN(){
+        return ISbN;
+    }
+```
+- This line declares a method `getISbN()` which returns the ISBN of the book.
+
+```java
+    public String getTittle(){
+        return Tittle;
+    }
+```
+- This line declares a method `getTittle()` which returns the title of the book.
+
+```java
+    public String getAuthor(){
+        return Author;
+    }
+```
+- This line declares a method `getAuthor()` which returns the author of the book.
+
+```java
+    public  boolean isAvailable(){
+        return Avialable;
+    }
+```
+- This line declares a method `isAvailable()` which returns `true` if the book is available, otherwise `false`.
+
+```java
+    public void setAvailable(boolean Available){
+        this.Avialable=Avialable;
+    }
+```
+- This line declares a method `setAvailable()` which sets the availability of the book.
+
+```java
+    public void CheckOut(){
+```
+- This line declares a method `CheckOut()` which is used to check out a book.
+
+```java
+        if(Avialable==false){
+            System.out.println("Book checked out"+Tittle);
+        }else{
+            System.out.println("Book not available "+Tittle);
+        }
+    }
+```
+- These lines contain logic to check if the book is available or not, and print a corresponding message.
+
+This explanation covers the `Book` class. Shall I continue with the explanation of the `User`, `Library`, and `Transaction` classes?
